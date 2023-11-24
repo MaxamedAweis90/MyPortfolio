@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding: 10rem;
+}
+
+:root {
+    --hero-color:#6d164c; 
+    --pro-color: #28a745; 
+    --text-color: #222;
+    --background-color: #f4f4f4;
+    --accent-color: #2b8ffae7 ;
+    
+  }
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: #333;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: transparent;
+    color: var(--accent-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    z-index: 9999;
+}
+
+#header.nav-opaque {
+    background-color: var(--accent-color); 
+    color: var(--hero-color);
+}
+
+
+#header nav {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    font-weight: 900;
+    font-size: large;
+}
+
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header ul li {
+    margin: 0 20px;
+    display: inline;
+}
+
+#header ul li a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+#header ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #0f0;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+#header ul li a:hover::after{
+    width: 100%;
+}
+
+#header .logo{
+    height: auto;
+    display: flex;
+}
+
+#header .logo h1{
+    font-size: 1.4rem;
+    font-family: "Sofia", sans-serif;
+    line-height: 100%;
+}
+
+#header .logo h1 span{
+    font-size: 1rem;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgba(196, 236, 19, 0.945);
+}
+
+#header .logo img{
+    margin-right: 0.9rem;
+    width: 6%; 
+    border: 2px solid var(--accent-color);
+    border-radius: 100%;
+    margin-top: -5px;
+}
+
+
+
+
+/* Hero section */
+
+#hero {
+    background: var(--hero-color);
+}
+
+#hero img {
+    margin-top: 28%;
+    height: 50rem;
+    transform: rotate(2deg);
+}
+
+#hero-text{
+    color: #fff;
+    margin-top: 0%;
+    margin-left: 10%;
+    font-size: 30px;
+}
+
+#hero-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+#hero-text h1 span{
+    color: rgb(241, 148, 8);
+}
+#hero-text h2 span{
+    color: #0f0;
+}
+
+#hero-text h2 .loco{
+    color: rgb(255, 94, 0);
+}
+
+
+
+
+
+/* Project section */
+
+#pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    margin-bottom: 10rem;
+    height: 100vh; /* Set a height to ensure the section takes at least the full viewport height */
+}
+
+#pro .project {
+    background: #88b2df;
+    padding: 20px;
+    margin-bottom: 5rem;
+    border-radius: 5px;
+    
+}
+
+
+/* swiper */
+
+
+
+#pro .swiper-slide {
+    height: 55vh;
+    width: 50%;
+    padding: 20px;
+    display: flex; 
+    justify-content: center;
+}
+
+#pro .swiper-slide img{
+    margin: 0 4rem;
+    width: 100%;
+    object-fit: cover;
+    border: 8px solid #88b2df;
+    position: relative;
+}
+
+#pro .swiper-slide img{
+    margin: 0 4rem;
+    width: 100%;
+    object-fit: cover;
+    border: 8px solid #126ac9;
+    position: relative;
+}
+
+#pro .swiper-button-prev,
+#pro .swiper-button-next{
+    display: none;
+}
+
+#pro .swiper-pagination {
+    margin-bottom: 5rem;
+}
+
+ /* Add this CSS for the preview container */
+#pro .swiper-slide .title{
+    background: #88b2df;
+    color: #222;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    left: 85px;    
+    z-index: 2;
+}
+  
+/* Footer section */
+#contact{
+
+    /* background: var(--accent-color); */
+    background-image: linear-gradient(rgb(0,0,0,0.95), var(--accent-color)), url(pic/contactpg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+  
